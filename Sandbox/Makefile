@@ -5,7 +5,7 @@ ODIR = ./obj
 LDIR = ./lib
 SRCDIR = ./src
 
-INCLUDES = -I../Vpfem/include
+INCLUDES = -I../Vpfem/include -I../Vpfem/src/vendor/spdlog/include/
 CPPLIBS = -L../Vpfem/lib -Wl,-rpath=Vpfem/lib/ -lvpfem
 CPPFLAGS = -Wall -m64 -std=c++17 
 

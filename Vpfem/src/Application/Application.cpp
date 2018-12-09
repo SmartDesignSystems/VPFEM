@@ -1,3 +1,4 @@
+#include "vp_pch.h"
 #include "Application.h"
 
 namespace Vpfem {

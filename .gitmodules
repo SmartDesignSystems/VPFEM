@@ -1,0 +1,3 @@
+[submodule "Vpfem/src/vendor/spdlog"]
+	path = Vpfem/src/vendor/spdlog
+	url = git@github.com:gabime/spdlog.git
