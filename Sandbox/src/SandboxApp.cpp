@@ -5,7 +5,6 @@ class Sandbox : public Vpfem::Application
 public:
     Sandbox()
     {
-
     }
 
     ~Sandbox()
@@ -16,11 +15,10 @@ public:
 
 int main(int argc, char** argv)
 {
-    Vpfem::Log::Init();
-    VP_CORE_WARN("Initialized Log!");
-    VP_ERROR("Hello!");
+    Sandbox* app = new Sandbox(); // Must be the first line of the main fuction
     
-    Sandbox* app = new Sandbox();
+    
+    VP_ERROR("Hello!");
     app->Run();
     delete app;
 }
