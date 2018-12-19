@@ -9,7 +9,7 @@ INCLUDES = -I./ -I./src/vendor/spdlog/include/ -I./src/include
 CPPLIBS = 
 CPPFLAGS = -c -Wall -Werror -fpic -m64 -std=c++17 
 
-FILES = Log/Log Application/Application
+FILES = Log/Log Application/Application Model/Model
 
 SRCS = $(addprefix $(SRCDIR)/, $(patsubst %,%.cpp,$(FILES)))
 OBJS = $(patsubst %.cpp, %.o, $(SRCS))

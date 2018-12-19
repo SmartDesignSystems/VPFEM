@@ -8,11 +8,17 @@ namespace Vpfem {
     {
         Vpfem::Log::Init();
         VP_CORE_INFO("Library Initialized!");
+
     }
 
     Application::~Application()
     {
 
+    }
+
+    void Application::ModelBuilder(int dimensions, int degreeOfFreedom)
+    {
+        m_Model = new Model(dimensions, degreeOfFreedom);
     }
 
     void Application::Run()

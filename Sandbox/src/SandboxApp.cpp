@@ -5,6 +5,10 @@ class Sandbox : public Vpfem::Application
 public:
     Sandbox()
     {
+        // Build the Model space 
+        int dimensions = 2;
+        int degreeOfFreedom = 3;
+        ModelBuilder(dimensions, degreeOfFreedom);
     }
 
     ~Sandbox()
