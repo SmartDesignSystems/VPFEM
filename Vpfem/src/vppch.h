@@ -10,6 +10,8 @@
 #include <unordered_map>
 #include <unordered_set>
 #include <sstream>
+#include <cuda.h>
+#include <cuda_runtime.h>
 
 
 #include <stack>

@@ -7,8 +7,11 @@ public:
     {
         // Build the Model space 
         int dimensions = 2;
-        int degreeOfFreedom = 3;
+        int degreeOfFreedom = 2;
         ModelBuilder(dimensions, degreeOfFreedom);
+        Node(1.0,2.0);
+        ModelBuild();
+
     }
 
     ~Sandbox()

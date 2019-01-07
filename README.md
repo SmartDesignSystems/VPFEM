@@ -12,3 +12,6 @@ The library is link to the sandbox application which is provided in the reposito
 The sandbox application should include the ```Vpfem.h```  
 The files is located at   
 ``` VPFEM/Vpfem/include/Vpfem.h ```
+## Model Build
+The sandbox applicaiton should build the model first
+``` ModelBuilder(dimensions, degreeOfFreedom); ```

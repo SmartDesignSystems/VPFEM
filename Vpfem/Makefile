@@ -5,11 +5,11 @@ ODIR = ./obj
 LDIR = ./lib
 SRCDIR = ./src
 
-INCLUDES = -I./ -I./src/vendor/spdlog/include/ -I./src/include
-CPPLIBS = 
+INCLUDES = -I./ -I./src -I./src/vendor/spdlog/include/ -I./src/include -I/usr/local/cuda/include
+CPPLIBS = -L/usr/local/cuda/lib64  -lcudart -lcudadevrt -L./lib -lm -lpthread -lcusolver -lcusparse
 CPPFLAGS = -c -Wall -Werror -fpic -m64 -std=c++17 
 
-FILES = Log/Log Application/Application Model/Model
+FILES = Log/Log Application/Application Model/Model Geometry/Geometry
 
 SRCS = $(addprefix $(SRCDIR)/, $(patsubst %,%.cpp,$(FILES)))
 OBJS = $(patsubst %.cpp, %.o, $(SRCS))

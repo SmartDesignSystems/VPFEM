@@ -1,6 +1,6 @@
 #include "vppch.h"
 
-#include "../Log/Log.h"
+#include "src/Log/Log.h"
 #include "src/Core.h"
 #include "Model.h"
 
@@ -9,8 +9,8 @@ namespace Vpfem {
     : m_modelDimensions(dimensions), m_modelDegreeOfFreedom(degreeOfFreedom)
     {   
         // error to make sure user is making space with 2 dimensions and 3 degrees of freedom
-        if (m_modelDimensions != 2 || m_modelDegreeOfFreedom != 3) {
-            VP_CORE_ERROR("Just two dimentions with three degrees of fredom is supported at the moment!");
+        if (m_modelDimensions != 2 || m_modelDegreeOfFreedom != 2) {
+            VP_CORE_ERROR("Just two dimentions with two degrees of fredom is supported at the moment!");
         } else {
             VP_CORE_TRACE(ToString());
         }
