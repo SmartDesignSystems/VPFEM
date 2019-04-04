@@ -8,6 +8,7 @@ namespace Vpfem {
     Model::Model(int dimensions, int degreeOfFreedom) 
     : m_modelDimensions(dimensions), m_modelDegreeOfFreedom(degreeOfFreedom)
     {   
+        VP_CORE_TRACE("Model Class initilized");
         // error to make sure user is making space with 2 dimensions and 3 degrees of freedom
         if (m_modelDimensions != 2 || m_modelDegreeOfFreedom != 2) {
             VP_CORE_ERROR("Just two dimentions with two degrees of fredom is supported at the moment!");
@@ -25,6 +26,7 @@ namespace Vpfem {
 
     Model::~Model() 
     {
+        VP_CORE_TRACE("Model Class destroyed");
 
     }
 }

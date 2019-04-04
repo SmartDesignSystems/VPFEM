@@ -10,8 +10,15 @@ public:
         int degreeOfFreedom = 2;
         ModelBuilder(dimensions, degreeOfFreedom);
         Node(1.0,2.0);
+        Node(1.0,2.0);
+        Node(1.0,2.0);
+        Node(1.0,2.0);
+        PointLoad(1,1.0,2.0);
+        PointLoad(1,1.0,2.0);
+        PointLoad(1,1.0,2.0);
+        PointLoad(1,1.0,2.0);
         ModelBuild();
-
+        
     }
 
     ~Sandbox()

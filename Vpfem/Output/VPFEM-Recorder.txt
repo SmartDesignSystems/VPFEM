@@ -1,0 +1,27 @@
+
+Node(0)	1	2
+Node(1)	1	2
+Node(2)	1	2
+Node(3)	1	2
+Load 0	1	1
+Load 1	2	2
+Load 2	1	1
+Load 3	2	2
+Load 4	1	1
+Load 5	2	2
+Load 6	1	1
+Load 7	2	2
+
+Node(0)	1	2
+Node(1)	1	2
+Node(2)	1	2
+Node(3)	1	2
+Load 0	1	1
+Load 1	2	2
+Load 2	1	1
+Load 3	2	2
+Load 4	1	1
+Load 5	2	2
+Load 6	1	1
+Load 7	2	2
+

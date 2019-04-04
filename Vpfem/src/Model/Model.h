@@ -4,13 +4,14 @@ namespace Vpfem {
     class Model
     {
     private:
-        int m_modelDimensions;
-        int m_modelDegreeOfFreedom;
+        size_t m_modelDimensions;
+        size_t m_modelDegreeOfFreedom;
     public:
         Model(int, int);
         ~Model();
         std::string ToString() const;
 
-        inline int get_dimentions() {return m_modelDimensions;};
+        inline size_t get_dimentions() {return m_modelDimensions;};
+        inline size_t get_degreeOfFreedom() {return m_modelDegreeOfFreedom;};
     };
 }

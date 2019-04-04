@@ -9,7 +9,7 @@ INCLUDES = -I./ -I./src -I./src/vendor/spdlog/include/ -I./src/include -I/usr/lo
 CPPLIBS = -L/usr/local/cuda/lib64  -lcudart -lcudadevrt -L./lib -lm -lpthread -lcusolver -lcusparse
 CPPFLAGS = -c -Wall -Werror -fpic -m64 -std=c++17 
 
-FILES = Log/Log Application/Application Model/Model Geometry/Geometry
+FILES = Log/Log Application/Application Model/Model Geometry/Geometry Recorder/Recorder
 
 SRCS = $(addprefix $(SRCDIR)/, $(patsubst %,%.cpp,$(FILES)))
 OBJS = $(patsubst %.cpp, %.o, $(SRCS))

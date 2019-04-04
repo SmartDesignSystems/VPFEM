@@ -26,7 +26,7 @@ namespace Vpfem {
         void Node2D(double, double); // 2D - no mass
 
         // Loads
-        //void PointLoad(int, std::vector<double &>, int);
+        void PointLoad(int, std::vector<double>&, size_t);
     };
     
     /*
@@ -40,4 +40,7 @@ namespace Vpfem {
         void point(int, double, double);
     };
     */
-}
+   
+   std::ostream& operator<<(std::ostream& os, const Geometry& c);
+
+};

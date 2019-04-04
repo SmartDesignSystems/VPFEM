@@ -3,6 +3,7 @@
 #include "spdlog/spdlog.h"
 #include "spdlog/fmt/ostr.h"
 
+
 namespace Vpfem {
     class Log
     {

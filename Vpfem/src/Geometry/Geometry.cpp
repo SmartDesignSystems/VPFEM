@@ -8,11 +8,11 @@
 namespace Vpfem {
     Geometry::Geometry() 
     {
-        VP_CORE_INFO("Geometry initilized!");
+        VP_CORE_TRACE("Geometry Class initilized!");
     }
     Geometry::~Geometry() 
     {
-        VP_CORE_INFO("Geometry destroyed!");
+        VP_CORE_TRACE("Geometry Class destroyed!");
     }
 
     void Geometry::ModelBuild()
@@ -29,15 +29,29 @@ namespace Vpfem {
     }
 
     // Load
-    /*
-    void Geometry::PointLoad(int NodeNumber, std::vector<double &> load, int numberOfDegreeOfFreedom)
+    
+    void Geometry::PointLoad(int NodeNumber, std::vector<double> &load,  size_t numberOfDegreeOfFreedom)
     // PointLoad(Node number, {load dof 1, load dof 2, load dof 3, ... }, number DOF = 2)
     {
         for(size_t i = 0; i < numberOfDegreeOfFreedom; i++)
         {
             h_LoadVector_value.push_back(NodeNumber*numberOfDegreeOfFreedom - 1 + i);
-            h_LoadVector_dof_i.push_back(load(i));
+            h_LoadVector_dof_i.push_back(load[i]);
         }
     }
-    */
+
+    std::ostream& operator<<(std::ostream& os, const Geometry& c)
+    { 
+        for(size_t i = 0; i < c.h_numberOfNodes; i++)
+        {
+            os << "Node(" << i << ")\t" << c.h_xVector[i] << "\t" << c.h_yVector[i] << "\n"; 
+        }
+        
+        for(size_t i = 0; i < c.h_LoadVector_dof_i.size(); i++)
+        {
+            os << "Load " << i << "\t" << c.h_LoadVector_dof_i[i] <<"\t" << c.h_LoadVector_value[i] << "\n";
+        }
+        
+        return os; 
+    };
 }
